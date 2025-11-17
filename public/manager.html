@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">PassLock</div>
+        <div class="nav-links">
+          <a href="/generator.html">Generator</a>
+          <a href="/manager.html" class="active">Manager</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+          "
+        >
+          <h1>My Passwords</h1>
+          <button id="addBtn" class="btn btn-sm">+ Add</button>
+        </div>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by app or username..."
+        />
+        <div id="entries"></div>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      "
+    >
+      <div class="card" style="width: 90%; max-width: 400px">
+        <h2>Add Entry</h2>
+        <input type="text" id="app" placeholder="App Name" />
+        <input type="text" id="user" placeholder="Username" />
+        <input type="password" id="pass" placeholder="Password" />
+        <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+          <button id="saveBtn" class="btn">Save</button>
+          <button onclick="closeModal()" class="btn" style="background: #333">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">PassLock</div>
+        <div class="nav-links">
+          <a href="/generator.html" class="active">Generator</a>
+          <a href="/manager.html">Manager</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="card">
+        <h1>Generate Strong Password</h1>
+        <button id="generateBtn" class="btn">Generate Password</button>
+        <div id="generated"></div>
+
+        <hr style="margin: 1.5rem 0; border-color: #333" />
+
+        <h3>Or Enter Manually</h3>
+        <input
+          type="text"
+          id="manualPass"
+          placeholder="Paste or type password"
+        />
+        <button id="useManual" class="btn btn-sm">Validate & Use</button>
+
+        <input type="hidden" id="pass" />
+        <button id="saveGenBtn" class="btn" style="margin-top: 1rem">
+          Save to Manager
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
